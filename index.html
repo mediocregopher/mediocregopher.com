@@ -1,12 +1,8 @@
 <html>
 <head>
-<script type="text/javascript" src="/static/js/analytics.js"></script>
-<script type="text/javascript">archive_analytics.values.server_name="wwwb-app12.us.archive.org";archive_analytics.values.server_ms=781;</script>
-<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
-
-
   <title>Mediocre Gopher</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/web/20141220105253im_/https://mediocregopher.com/favicon.ico">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
   <style type="text/css">
     body { background-color:#434343; font-family:arial; }
     pre { font-family:monospace; font-size:8pt; color:#bada55; font-weight:bold; }
@@ -17,7 +13,7 @@
   </style>
 </head>
 <body>
-  <div style="width:99%;position:absolute;top:5em;text-align:center;">
+  <div id="main" style="width:99%;position:absolute;top:5em;text-align:center;">
 <pre>
                                        `.-/+osssssssssoo+/:-`                                       
                                 `-/oydNMMNmdhyyyyyyyyyyhdmNMMNmhs+:`                                
@@ -84,4 +80,35 @@
 </pre>
   </div>
 </body>
+
+<script>
+  function replaceAt(str, index, replacement) {
+    return str.substr(0, index) + replacement+ str.substr(index + replacement.length);
+  }
+
+  function fuckItUp() {
+    document.querySelectorAll("#main pre").forEach((pre) => {
+      var txt = pre.innerText;
+      var len = txt.length;
+      var a = Math.floor(Math.random() * len);
+      var aChar = txt.charAt(a);
+      var b = Math.floor(Math.random() * len);
+      var bChar = txt.charAt(a);
+
+      txt = replaceAt(txt, a, bChar);
+      txt = replaceAt(txt, b, aChar);
+      pre.innerText = txt;
+    });
+  }
+
+  var wait = 1000;
+  function fuckItUpALot() {
+    fuckItUp();
+    if (wait > 10) { wait *= 0.95; }
+    setTimeout(fuckItUpALot, wait);
+  }
+  setTimeout(fuckItUpALot, wait);
+
+</script>
+
 </html>
