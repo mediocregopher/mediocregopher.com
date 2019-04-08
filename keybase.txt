@@ -1,0 +1,53 @@
+https://keybase.io/mediocregopher
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mediocregopher.com
+  * I am mediocregopher (https://keybase.io/mediocregopher) on keybase.
+  * I have a public key ASCUO1SLTd3HrawLBrTG_gMZNsXN-BeKa4UZINwsW-SQtQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01019e83db8045ae63361f6a82be18d7953345270ef735dbbc2fb9ca838d37e0c8b20a",
+      "host": "keybase.io",
+      "kid": "0120943b548b4dddc7adac0b06b4c6fe031936c5cdf8178a6b851920dc2c5be490b50a",
+      "uid": "c649b28ffab19586db2aa9ec756cce00",
+      "username": "mediocregopher"
+    },
+    "merkle_root": {
+      "ctime": 1554748113,
+      "hash": "1b0c726042474da337ba5e3d211b9e1693906895d73c1db110f130f0ae7220a75759c6bc892320636c4522b0e38a6542dd9b03e497514387a1542f74ce2b4287",
+      "hash_meta": "20b1b3be7a403a0785622c9fe14e90bc331eb9b4684c5d4fc112bb3de9d89600",
+      "seqno": 5119716
+    },
+    "service": {
+      "entropy": "+zCEzBmgPmeF5hKgGZUL+ycU",
+      "hostname": "mediocregopher.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.0.0"
+  },
+  "ctime": 1554748129,
+  "expire_in": 504576000,
+  "prev": "f1f7659789ea545315bf806905544b1b54a7e42cbe6f325d6e9cf6a62071265c",
+  "seqno": 85,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglDtUi03dx62sCwa0xv4DGTbFzfgXimuFGSDcLFvkkLUKp3BheWxvYWTESpcCVcQg8fdll4nqVFMVv4BpBVRLG1Sn5Cy+bzJdbpz2piBxJlzEIIao5fxGHibmPDW+SgstlfJIMpxFf/1gBqm/C6/8m3/ZAgHCo3NpZ8RAH9BvYys9YB1kityootvc50fubQfGg8yzJU5eoQWNQMqGqZIE3bFzzx57PSFsqchwng478Gs4SpCwPnkGmp8tDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFmh4wcjEk0m3/iozeM2lE4eW3Wagdn9NLKisKURFlwto3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mediocregopher
