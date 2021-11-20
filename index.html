@@ -1,82 +1,134 @@
 <html>
 <head>
   <title>Mediocre Gopher</title>
+
+  <!--
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  -->
+
   <style type="text/css">
-    body { background-color:#434343; font-family:arial; }
-    pre { font-family:monospace; font-size:8pt; color:#bada55; font-weight:bold; }
-    a:link { color: #bada55; }
-    a:visited { color: #bada55; }
-    ul { list-style-type: none; margin:0px; padding:0px; }
-    li { margin:0px; padding:0px; }
+
+    @font-face {
+      font-family: Raleway;
+      src: url(Raleway-VariableFont_wght.ttf);
+    }
+
+    body { background-color:#434343; color:#bada55; font-family:Raleway; }
+    a:link { color:#bada55; font-weight: bold; }
+    a:visited { color:#bada55; font-weight: normal; }
+    a:hover { color:#bada55; text-decoration: none; }
+    .fuck-it-up { font-family:Courier,monospace; font-size:8pt; line-height:4pt; color:#bada55; }
+    .block { padding:3rem 0 3rem 3rem; float:left; min-width:40vw; }
   </style>
 </head>
-<body>
-  <div id="main" style="width:99%;position:absolute;top:5em;text-align:center;">
-<pre>
-                                       `.-/+osssssssssoo+/:-`                                       
-                                `-/oydNMMNmdhyyyyyyyyyyhdmNMMNmhs+:`                                
-                            .+ymMMmhs+:.`                  `.-/oydNMmh+-`                           
-                        ./yNMmy+-`                                `-/smMNh+-                        
-                     .+dMNh+.                                          `/ymMms-                     
-                  `/hMNy:`                                                 -omMmo.                  
-                .oNMh/`                                                       -sNMh:                
-              .yNNs.                                                            `/dMm/              
-            `sNNs.                                                                 :dMm:            
-           +NMy.                                                                     /mMh.          
-         .hMm:                                                                        `sMN/         
-        :NMs`                                                                           :mMy`       
-       oMN/                                                                              `hMd.      
-      sMN-                                   `.:/+oyyysyyyysyyyoo/-`                       yMm.     
-     sMm.                               `:oyhyso/:.```      ```.:/oyhy+.                    sMm.    
-    oMN-                             -ohho:`                         `/ydo`                  yMm`   
-   :MM:                           -sds:`                                `+dy.                `dMy   
-  `mMs                          /dh:                                       /ms`               -NM/  
-  oMm`                        :dy.`oy`                                      `om:               oMm` 
- `NM+                       .hd- -Nd`               `-+++:.                   -dy`             `NM+ 
- +MN`                      :m+   dM-              `yMMMMMMMmo`                  sm-             sMd 
- dMy                      +N:   :MN               `sMMMMMMMMMN+                  :mo            :MN.
-.NM/                     /N-    `NM:                -sNMMMMMMNs                   `hd.          `NM/
--MM-                    .N/      .-                    .::/:.                       /N/          dMo
-:MM.                    sd                                                      -/osdMM-         dMs
-:MM.                   `N/                                                    `dMMMMMMMh         dMs
--MM-                   /m`                                                     /dMMMMMMd        `dMo
-`NM/                   hy                                                        `-/hMM:        .NM/
- hMy                  `N/                                                          `dN/         :MN.
- +MN`                 -M`                                                         /my.          yMh 
- `NM+                 om                                                      `-oy+`           .NM/ 
-  oMm`                hs                                                 .:+sys/`              sMd  
-  `mMs                N/                                          `.:+sys+:.                  :MM:  
-   -MM/              .N-                                       `-/sMm/`                      `mMs   
-    +MN-             :N`                                          +d`                       `hMh`   
-     oMN-            +d                                          :m.                       `yMd`    
-      oMN-           yh                                          ho                       `hMd.     
-       +MN/          ho                                         .N.                      .dMh`      
-        :NMy`       `m+                                         +d                      :NMs`       
-         `hMm:      `N/                                         ss                    `yMN/         
-           /NMy.    .M-                                         h+                   +NMy`          
-            `sNMs.  .M.                                         d/                 /dMd-            
-              .sNNy-.M`                                         m/              `+mMd/              
-                `oNMmM`                                         m/            -sNMh:                
-                  `/hN`                                         d/         -smMmo.                  
-                     `                                          d/     ./yNMms-                     
-                                                                d/`-+ymMNh+.                        
-                                                                mNNMmy+-                            
-                                                                ++-`                                
 
-888b     d888               888 d8b                                    .d8888b.                    888                       
-8888b   d8888               888 Y8P                                   d88P  Y88b                   888                       
-88888b.d88888               888                                       888    888                   888                       
-888Y88888P888  .d88b.   .d88888 888  .d88b.   .d8888b 888d888 .d88b.  888         .d88b.  88888b.  88888b.   .d88b.  888d888 
-888 Y888P 888 d8P  Y8b d88" 888 888 d88""88b d88P"    888P"  d8P  Y8b 888  88888 d88""88b 888 "88b 888 "88b d8P  Y8b 888P"   
-888  Y8P  888 88888888 888  888 888 888  888 888      888    88888888 888    888 888  888 888  888 888  888 88888888 888     
-888   "   888 Y8b.     Y88b 888 888 Y88..88P Y88b.    888    Y8b.     Y88b  d88P Y88..88P 888 d88P 888  888 Y8b.     888     
-888       888  "Y8888   "Y88888 888  "Y88P"   "Y8888P 888     "Y8888   "Y8888P88  "Y88P"  88888P"  888  888  "Y8888  888     
-                                                                                          888                                
-                                                                                          888                                
-                                                                                          888                                
-</pre>
+<body>
+  <div class="block">
+    <pre class="fuck-it-up">
+                 .%*.                                                        .-.
+                .%@@@+.                                                .--=%@@@-
+                =@@@@@@-                                         :--+@@@@@@@@@*
+                *@%@@@@@%:                               :--=#@@@@@@@@@@@@#@@+
+                @@::%@@@@@@-:                   :::-=%@@@@@@@@@@@@@@%#*-  :@*
+               .@@   =@@@@@@@@@+-:::::::-=*@@@@@@@@@@@@@@@@@@@%##-        @@:
+               #@#     +%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%#*:              -@@
+               #@-        *%@@@@@@@@@@@@@@@@@%%%#=                       %@=
+               @@:             -=+++==     ..                            @@:
+               @@        .               -@@@                           +@@
+              #@%     =@@@@-            +@@@@#              *+          %@#
+              #@-   -@@@@@@@.          +@@@@@%           .%@@@@=        @@:
+              @@:  +@@@@@@@@@         +@+ +@@@         %@@@@@@@@@      -@@
+              @@  *@%@*  :@@@        *@+  -@@@       %@@@@@@@@@@@#     @@@
+             #@% %@ @%    %@@       *@*   .@@@     =@@@*@@   :@@@@     @@:
+             %@:## *@+    :@@      :@@     @@@    %@@: @#     .@@@    .@@
+             @@:.  @@:    .@@      @@      @@@   %@:  @@       @@%    @@%
+             @@   -@@.    =@@     @@.      @@@  %@.  #@-       @@#    @@.
+            %@%   +@@.    @@.    %@-       @@@ #@    @@.      :@@    -@@
+            %@:   +@@+   .@%    #@=        @@@.@    *@@       +@+    @@*
+            @@:   +@@%. .%%    *@+         @@@      %@@      -@#     @@
+            @@    :@@@@@@%    :@@          @@%      %@@      @#     *@@
+           %@@     #@@@@*     @@           @@%      %@@.    %@.     @@:
+           @@:      ===:     @@.           @@%      %@@:  =@%.     .@@
+           @@.              #@=            @@%      %@@%+%@#.      @@%
+           @@              +@*             @@#      -@@@@@*       .@@
+          %@@             :@@              @@#       %@@#:        =@@
+          @@:            .@@               @@#        :           @@=
+          @@.            @@.               @@#                   :@@
+          @@            #@=                @@%                   %@%
+         #@@           +@+                 #@%                  .@@
+         @@:          =@#                  +@%                  =@%
+         @@          :@%                   -@@                  @@+
+         @@         .@@                    -@:                 -@@
+        -@@         @%                     .:                  *@#
+        @@*         #                                          @@.
+        @@                                                    =@@
+       .@@                                                    @@*
+       .@@                                                   .@@
+       *@@                                                   =@#
+       @@*                                                   @@*
+       @@                                                   -@@
+      .@@                                                   +@*
+      .@@                                                   @@-
+      -@@                                                  =@@
+      %@%                                                  #@*
+      @@                                                   @@:
+      @@                                                  +@@
+     .@@                                                  %@+
+     :@%                                                  @@.
+     :@%                                                 *@%
+     -@.                                                 %@=
+     %@                                                  @@.
+     @@                                                 *@%
+     @@                                                 %@=
+     @%                                                 @@:
+    :@%                                                +@@
+    :@*                =+-                             #@+
+    :@:              .%@@@.                            @@-
+    -@              =@@@@@#                           :@@
+    =@             *@#.=@@%                           #@%
+    *@            #@-  -@@%                           %@-
+    @@           #@:   :@@%                           @@:
+    @@          #%     .@@%               .#@@*      -@@
+    @%         #%      .@@%              +@@@@@-     %@%
+    @#        %@       :@@%            .@@@@@@@@     %@:
+    @#       %@        :@@%           +@@% .@@@@     @@:
+    @#      %@         :@@%          #@@:   :@@@    -@@
+    @#     @@.         .@@@        .@@%     .@@@=   %@%
+    @#    @@.          .@@@:      %@@-       @@@%   %@:
+    @#   @@             @@@@    %@@@         *@@@   @@:
+    @# .@@              @@@@@@@@@@=          :@@@   @@
+    * @@@               :@@@@@@@@.           :@@@  *@@
+ .@@@@@%                 -@@@@@.             .@@@  @@=
+ @@@@@:                    ..                 @@@  @@.
+ -@%:                                         @@@  @@.
+                                              @@@  @@
+                                              -@@ =@@
+                                              .@@ @@+
+                                              .@@:@@.
+                                               @@#@-
+                                               @@@.
+                                               +@-
+                                                -
+    </pre>
+  </div>
+  <div class="block">
+    <h1>Social</h1>
+    <ul>
+      <li><a href="https://blog.mediocregopher.com">Blog</a> is for WIP projects.</li>
+      <li><a href="https://twitter.com/mediocre_gopher">Twitter</a> is for shitcoins.</li>
+    </ul>
+    <h1>Portfolios</h1>
+    <ul>
+      <li><a href="https://github.com/mediocregopher">GitHub</a> is for code I've written.
+      <li><a href="https://opensea.io/mediocregopher?tab=created">OpenSea</a> is for art I've made.
+      <li><a href="https://bgpicciano.com">Resume</a> is for jobs I've had.
+    </ul>
+    <h1>Projects</h1>
+    <ul>
+      <li><a href="https://github.com/radix">radix</a> is for using redis with go.
+      <li><a href="https://dehub.dev">dehub</a> is for decentralized git projects.
+    </ul>
   </div>
 </body>
 
@@ -85,29 +137,40 @@
     return str.substr(0, index) + replacement+ str.substr(index + replacement.length);
   }
 
-  function fuckItUp() {
-    document.querySelectorAll("#main pre").forEach((pre) => {
-      var txt = pre.innerText;
-      var len = txt.length;
-      var a = Math.floor(Math.random() * len);
-      var aChar = txt.charAt(a);
-      var b = Math.floor(Math.random() * len);
-      var bChar = txt.charAt(a);
+  const fuckItUpEls = document.querySelectorAll(".fuck-it-up");
 
-      txt = replaceAt(txt, a, bChar);
-      txt = replaceAt(txt, b, aChar);
-      pre.innerText = txt;
+  function fuckItUp() {
+    fuckItUpEls.forEach((pre) => {
+      while (true) {
+        var txt = pre.innerText;
+        var len = txt.length;
+
+        var a = Math.floor(Math.random() * len);
+        var aChar = txt.charAt(a);
+        var b = Math.floor(Math.random() * len);
+        var bChar = txt.charAt(b);
+
+        if (
+          aChar == " " || bChar == " " ||
+          aChar == "\n" || bChar == "\n"
+        ) continue;
+
+        txt = replaceAt(txt, a, bChar);
+        txt = replaceAt(txt, b, aChar);
+        pre.innerText = txt;
+
+        break
+      }
     });
   }
 
   var wait = 1000;
   function fuckItUpALot() {
     fuckItUp();
-    if (wait > 10) { wait *= 0.95; }
+    if (wait > 2) { wait *= 0.95; }
     setTimeout(fuckItUpALot, wait);
   }
   setTimeout(fuckItUpALot, wait);
-
 </script>
 
 </html>
