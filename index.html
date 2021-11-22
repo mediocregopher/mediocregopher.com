@@ -19,7 +19,7 @@
     a:visited { color:#bada55; font-weight: normal; }
     a:hover { color:#bada55; text-decoration: none; }
     .fuck-it-up { font-family:Courier,monospace; font-size:8pt; line-height:4pt; color:#bada55; }
-    .block { padding:3rem 0 3rem 3rem; float:left; min-width:40vw; }
+    .block { padding:3rem 0 3rem 3rem; float:left; }
   </style>
 </head>
 
@@ -126,7 +126,7 @@
     </ul>
     <h1>Projects</h1>
     <ul>
-      <li><a href="https://github.com/radix">radix</a> is for using redis with go.
+      <li><a href="https://github.com/mediocregopher/radix">radix</a> is for using redis with go.
       <li><a href="https://dehub.dev">dehub</a> is for decentralized git projects.
     </ul>
   </div>
@@ -138,6 +138,22 @@
   }
 
   const fuckItUpEls = document.querySelectorAll(".fuck-it-up");
+
+  // right-pad the lines in each fuck-it-up
+  fuckItUpEls.forEach((pre) => {
+
+    const lines = pre.innerText.split('\n');
+
+    let maxL = 0;
+    lines.forEach((line) => {
+      maxL = maxL > line.length ? maxL : line.length;
+    });
+
+    pre.innerText = lines.map((line) =>
+      line + " ".repeat(maxL - line.length)
+    ).join('\n');
+
+  });
 
   function fuckItUp() {
     fuckItUpEls.forEach((pre) => {
@@ -151,7 +167,6 @@
         var bChar = txt.charAt(b);
 
         if (
-          aChar == " " || bChar == " " ||
           aChar == "\n" || bChar == "\n"
         ) continue;
 
