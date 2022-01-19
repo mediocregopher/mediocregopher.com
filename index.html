@@ -1,11 +1,14 @@
 <html>
 <head>
-  <title>Mediocre Gopher</title>
 
-  <!--
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-  -->
+  <title>Mediocre Hub</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="stylesheet" type="text/css" href="simple-grid.min.css" />
 
   <style type="text/css">
 
@@ -14,128 +17,198 @@
       src: url(Raleway-VariableFont_wght.ttf);
     }
 
-    body { background-color:#434343; color:#bada55; font-family:Raleway; }
+    * {
+      color:#bada55;
+      font-family:Raleway;
+    }
+
+    body { background-color:#434343; }
+
     a:link { color:#bada55; font-weight: bold; }
     a:visited { color:#bada55; font-weight: normal; }
     a:hover { color:#bada55; text-decoration: none; }
-    .fuck-it-up { font-family:Courier,monospace; font-size:8pt; line-height:4pt; color:#bada55; }
-    .block { padding:3rem 0 3rem 3rem; float:left; }
+
+    .pre-container {
+      width: 100%;
+    }
+
+    .pre-container pre {
+      padding-top: 2rem;
+      float: right;
+    }
+
+    .fuck-it-up {
+      font-family:Courier,monospace;
+      font-size:8pt;
+      line-height:4pt;
+      color:#bada55;
+    }
+
   </style>
 </head>
 
-<body>
-  <div class="block">
-    <pre class="fuck-it-up">
-                 .%*.                                                        .-.
-                .%@@@+.                                                .--=%@@@-
-                =@@@@@@-                                         :--+@@@@@@@@@*
-                *@%@@@@@%:                               :--=#@@@@@@@@@@@@#@@+
-                @@::%@@@@@@-:                   :::-=%@@@@@@@@@@@@@@%#*-  :@*
-               .@@   =@@@@@@@@@+-:::::::-=*@@@@@@@@@@@@@@@@@@@%##-        @@:
-               #@#     +%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%#*:              -@@
-               #@-        *%@@@@@@@@@@@@@@@@@%%%#=                       %@=
-               @@:             -=+++==     ..                            @@:
-               @@        .               -@@@                           +@@
-              #@%     =@@@@-            +@@@@#              *+          %@#
-              #@-   -@@@@@@@.          +@@@@@%           .%@@@@=        @@:
-              @@:  +@@@@@@@@@         +@+ +@@@         %@@@@@@@@@      -@@
-              @@  *@%@*  :@@@        *@+  -@@@       %@@@@@@@@@@@#     @@@
-             #@% %@ @%    %@@       *@*   .@@@     =@@@*@@   :@@@@     @@:
-             %@:## *@+    :@@      :@@     @@@    %@@: @#     .@@@    .@@
-             @@:.  @@:    .@@      @@      @@@   %@:  @@       @@%    @@%
-             @@   -@@.    =@@     @@.      @@@  %@.  #@-       @@#    @@.
-            %@%   +@@.    @@.    %@-       @@@ #@    @@.      :@@    -@@
-            %@:   +@@+   .@%    #@=        @@@.@    *@@       +@+    @@*
-            @@:   +@@%. .%%    *@+         @@@      %@@      -@#     @@
-            @@    :@@@@@@%    :@@          @@%      %@@      @#     *@@
-           %@@     #@@@@*     @@           @@%      %@@.    %@.     @@:
-           @@:      ===:     @@.           @@%      %@@:  =@%.     .@@
-           @@.              #@=            @@%      %@@%+%@#.      @@%
-           @@              +@*             @@#      -@@@@@*       .@@
-          %@@             :@@              @@#       %@@#:        =@@
-          @@:            .@@               @@#        :           @@=
-          @@.            @@.               @@#                   :@@
-          @@            #@=                @@%                   %@%
-         #@@           +@+                 #@%                  .@@
-         @@:          =@#                  +@%                  =@%
-         @@          :@%                   -@@                  @@+
-         @@         .@@                    -@:                 -@@
-        -@@         @%                     .:                  *@#
-        @@*         #                                          @@.
-        @@                                                    =@@
-       .@@                                                    @@*
-       .@@                                                   .@@
-       *@@                                                   =@#
-       @@*                                                   @@*
-       @@                                                   -@@
-      .@@                                                   +@*
-      .@@                                                   @@-
-      -@@                                                  =@@
-      %@%                                                  #@*
-      @@                                                   @@:
-      @@                                                  +@@
-     .@@                                                  %@+
-     :@%                                                  @@.
-     :@%                                                 *@%
-     -@.                                                 %@=
-     %@                                                  @@.
-     @@                                                 *@%
-     @@                                                 %@=
-     @%                                                 @@:
-    :@%                                                +@@
-    :@*                =+-                             #@+
-    :@:              .%@@@.                            @@-
-    -@              =@@@@@#                           :@@
-    =@             *@#.=@@%                           #@%
-    *@            #@-  -@@%                           %@-
-    @@           #@:   :@@%                           @@:
-    @@          #%     .@@%               .#@@*      -@@
-    @%         #%      .@@%              +@@@@@-     %@%
-    @#        %@       :@@%            .@@@@@@@@     %@:
-    @#       %@        :@@%           +@@% .@@@@     @@:
-    @#      %@         :@@%          #@@:   :@@@    -@@
-    @#     @@.         .@@@        .@@%     .@@@=   %@%
-    @#    @@.          .@@@:      %@@-       @@@%   %@:
-    @#   @@             @@@@    %@@@         *@@@   @@:
-    @# .@@              @@@@@@@@@@=          :@@@   @@
-    * @@@               :@@@@@@@@.           :@@@  *@@
- .@@@@@%                 -@@@@@.             .@@@  @@=
- @@@@@:                    ..                 @@@  @@.
- -@%:                                         @@@  @@.
-                                              @@@  @@
-                                              -@@ =@@
-                                              .@@ @@+
-                                              .@@:@@.
-                                               @@#@-
-                                               @@@.
-                                               +@-
-                                                -
-    </pre>
-  </div>
-  <div class="block">
-    <h1>Social</h1>
-    <ul>
-      <li><a href="https://blog.mediocregopher.com">Blog</a> is for WIP projects.</li>
-      <li><a href="https://twitter.com/mediocre_gopher">Twitter</a> is for shitcoins.</li>
-    </ul>
-    <h1>Portfolios</h1>
-    <ul>
-      <li><a href="https://github.com/mediocregopher">GitHub</a> is for code I've written.
-      <li>
-        Exchange.art is for art I've made.
+<body><div class="container">
+
+    <div class="row">
+
+      <div class="col-4">
+
+        <h1>mediocregopher</h1>
+
+        <p>
+          Fuck Web 2.0
+        </p>
+
+        <p>
+          This page acts as the hub of my web presence. Everything I do is
+          linked to from here.
+        </p>
+
+      </div>
+
+      <div class="col-2"></div>
+
+      <div class="col-6">
+
+        <div class="pre-container"><pre class="fuck-it-up">
+                .%*.                                                        .-.
+               .%@@@+.                                                .--=%@@@-
+               =@@@@@@-                                         :--+@@@@@@@@@*
+               *@%@@@@@%:                               :--=#@@@@@@@@@@@@#@@+
+               @@::%@@@@@@-:                   :::-=%@@@@@@@@@@@@@@%#*-  :@*
+              .@@   =@@@@@@@@@+-:::::::-=*@@@@@@@@@@@@@@@@@@@%##-        @@:
+              #@#     +%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%#*:              -@@
+              #@-        *%@@@@@@@@@@@@@@@@@%%%#=                       %@=
+              @@:             -=+++==     ..                            @@:
+              @@        .               -@@@                           +@@
+             #@%     =@@@@-            +@@@@#              *+          %@#
+             #@-   -@@@@@@@.          +@@@@@%           .%@@@@=        @@:
+             @@:  +@@@@@@@@@         +@+ +@@@         %@@@@@@@@@      -@@
+             @@  *@%@*  :@@@        *@+  -@@@       %@@@@@@@@@@@#     @@@
+            #@% %@ @%    %@@       *@*   .@@@     =@@@*@@   :@@@@     @@:
+            %@:## *@+    :@@      :@@     @@@    %@@: @#     .@@@    .@@
+            @@:.  @@:    .@@      @@      @@@   %@:  @@       @@%    @@%
+            @@   -@@.    =@@     @@.      @@@  %@.  #@-       @@#    @@.
+           %@%   +@@.    @@.    %@-       @@@ #@    @@.      :@@    -@@
+           %@:   +@@+   .@%    #@=        @@@.@    *@@       +@+    @@*
+           @@:   +@@%. .%%    *@+         @@@      %@@      -@#     @@
+           @@    :@@@@@@%    :@@          @@%      %@@      @#     *@@
+          %@@     #@@@@*     @@           @@%      %@@.    %@.     @@:
+          @@:      ===:     @@.           @@%      %@@:  =@%.     .@@
+          @@.              #@=            @@%      %@@%+%@#.      @@%
+          @@              +@*             @@#      -@@@@@*       .@@
+         %@@             :@@              @@#       %@@#:        =@@
+         @@:            .@@               @@#        :           @@=
+         @@.            @@.               @@#                   :@@
+         @@            #@=                @@%                   %@%
+        #@@           +@+                 #@%                  .@@
+        @@:          =@#                  +@%                  =@%
+        @@          :@%                   -@@                  @@+
+        @@         .@@                    -@:                 -@@
+       -@@         @%                     .:                  *@#
+       @@*         #                                          @@.
+       @@                                                    =@@
+      .@@                                                    @@*
+      .@@                                                   .@@
+      *@@                                                   =@#
+      @@*                                                   @@*
+      @@                                                   -@@
+     .@@                                                   +@*
+     .@@                                                   @@-
+     -@@                                                  =@@
+     %@%                                                  #@*
+     @@                                                   @@:
+     @@                                                  +@@
+    .@@                                                  %@+
+    :@%                                                  @@.
+    :@%                                                 *@%
+    -@.                                                 %@=
+    %@                                                  @@.
+    @@                                                 *@%
+    @@                                                 %@=
+    @%                                                 @@:
+   :@%                                                +@@
+   :@*                =+-                             #@+
+   :@:              .%@@@.                            @@-
+   -@              =@@@@@#                           :@@
+   =@             *@#.=@@%                           #@%
+   *@            #@-  -@@%                           %@-
+   @@           #@:   :@@%                           @@:
+   @@          #%     .@@%               .#@@*      -@@
+   @%         #%      .@@%              +@@@@@-     %@%
+   @#        %@       :@@%            .@@@@@@@@     %@:
+   @#       %@        :@@%           +@@% .@@@@     @@:
+   @#      %@         :@@%          #@@:   :@@@    -@@
+   @#     @@.         .@@@        .@@%     .@@@=   %@%
+   @#    @@.          .@@@:      %@@-       @@@%   %@:
+   @#   @@             @@@@    %@@@         *@@@   @@:
+   @# .@@              @@@@@@@@@@=          :@@@   @@
+   * @@@               :@@@@@@@@.           :@@@  *@@
+.@@@@@%                 -@@@@@.             .@@@  @@=
+@@@@@:                    ..                 @@@  @@.
+-@%:                                         @@@  @@.
+                                             @@@  @@
+                                             -@@ =@@
+                                             .@@ @@+
+                                             .@@:@@.
+                                              @@#@-
+                                              @@@.
+                                              +@-
+                                               -
+        </pre></div>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-4">
+
+        <h2>Social</h2>
         <ul>
-          <li><a href="https://exchange.art/collections/Cat%20Season">Cat Season</a></li>
+          <li><a href="https://blog.mediocregopher.com">Mediocre Blog</a> is for WIP projects.</li>
+          <li><a href="https://twitter.com/mediocre_gopher">Twitter</a> is for shilling, shitcoins, and hot takes.</li>
+          <li><a href="https://bgpicciano.com">Resume</a> is for jobs I've had.</li>
         </ul>
-      </li>
-      <li><a href="https://bgpicciano.com">Resume</a> is for jobs I've had.
-    </ul>
-    <h1>Projects</h1>
-    <ul>
-      <li><a href="https://github.com/mediocregopher/radix">radix</a> is for using redis with go.
-      <li><a href="https://dehub.dev">dehub</a> is for decentralized git projects.
-    </ul>
-  </div>
-</body>
+
+      </div>
+
+      <div class="col-4">
+
+        <h2>Dev</h2>
+        <ul>
+          <li><a href="https://github.com/mediocregopher">GitHub</a> is for open-source code I've written.</li>
+          <li><a href="https://github.com/mediocregopher/radix">radix</a> is for using redis with go.</li>
+          <li><a href="https://dehub.dev">dehub</a> is for decentralized git projects.</li>
+        </ul>
+
+      </div>
+
+      <div class="col-4">
+
+        <h2>Art</h2>
+        <ul>
+          <li><a href="https://mediocregopher.holaplex.com">Holaplex</a> is for NFTs I've made.</li>
+          <li><a href="https://exchange.art/collections/Cat%20Season">Cat Season</a> is there too.</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-4">
+
+        <h2>Misc</h2>
+        <ul>
+          <li><a href="https://news.cryptic.io">Cryptic News</a> aggregates interesting blogs.</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+</div></body>
 
 <script>
   function replaceAt(str, index, replacement) {
